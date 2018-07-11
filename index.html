@@ -1,0 +1,149 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>FCC Survey Form</title>
+    <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
+   <style>
+   
+   #form {
+     color:teal;
+     border: teal 5px solid;
+     border-radius:20px;
+     font-family:helvetica, arial;
+     font-size: 1em;
+     display: grid;
+     grid:repeat(auto-fit, minmax(50px, 1fr)) / 1fr;
+     padding: 30px 200px;
+     margin: 20px 200px;
+   }
+
+   input {
+     margin: 20px;
+   }
+   button {
+     color: white;
+     background-color: teal;
+     width: 200px;
+     min-height:30px;
+     border-radius:10px;
+     box-shadow: 2px 2px 4px rgba(0,128,128, .2);
+   } 
+   select {
+     display:block;
+     margin:20px;
+   }
+   fieldset {
+     border: teal solid 2px;
+     margin: 20px;
+   }
+
+   textarea {
+     margin: 20px;
+     border: teal solid 2px;
+   }
+
+   .submit {
+     display:grid;
+     grid: 1fr/1fr;
+     justify-items:center;
+   }
+ 
+   </style>
+
+
+</head>
+
+<body>
+  <div id="form">
+    <h1 id="title">Title of Survey Form</h1>
+    <p id="description">This form collects information about lead research for an online repository with such information</p>
+    <form id="survey-form">
+      <div>
+        <label id="name-label" >Name: 
+          <input type="text" id="name" placeholder="Bobby" size="50" required> 
+        </label>
+    </div>
+    <div>
+      <label id="email-label">Email:
+          <input type="email" id="email" placeholder="bobby@bobbysworld.com" size="50" required>
+      </label>
+    </div>
+    <div >
+      <label id="number-label">Year:
+          <input type="number" id="number" min="1800" max="2020" placeholder="2018" style="display:block">
+      </label>
+    </div>
+    <div>
+      <label for="dropdown">Choose article topic:</label>
+      <select id="dropdown">
+          <option value="exposure">Exposure</option>
+          <option value="health">Health Impact</option>
+          <option value="surveillance">Surveillance</option>
+          <option value="none" selected>--Please choose an option--</option>
+      </select>
+    </div>
+
+    <div style="padding:20px 0">Impact of article
+      <fieldset>
+          
+          <legend>select impact</legend>
+      
+          <div>
+              <input type="radio" id="small" name="radioButtons" checked value="small"/>
+              <label for="small">Small</label>
+          </div>
+      
+          <div>
+              <input type="radio" id="medium" name="radioButtons" value="medium" />
+              <label for="medium">Medium</label>
+          </div>
+      
+          <div>
+              <input type="radio" id="big" name="radioButtons" value="big"/>
+              <label for="big">Big</label>
+          </div>
+      
+      </fieldset>
+    <div style="padding:20px 0">Complicatedness of article
+      <fieldset>
+          
+          <legend>select impact</legend>
+      
+          <div>
+              <input value="easy" type="checkbox" id="easy" name="check_box" checked />
+              <label for="easy">Easy peasy</label>
+          </div>
+      
+          <div>
+              <input type="checkbox" id="medium" name="check_box"value="medium" />
+              <label for="medium">Tough but doable</label>
+          </div>
+      
+          <div>
+              <input type="checkbox" id="hard" name="check_box" value="hard"  />
+              <label for="hard">Very hard</label>
+          </div>
+      
+      </fieldset>
+      </div>
+    </div>
+    <div>
+        <label for="notes">Notes</label>
+
+      <textarea placeholder="In this article..." name="notes" id="notes" cols="50" rows="10"></textarea>
+    </div>
+      <div class="submit">
+          <button type="submit" id="submit" value="Submit" />
+            Submit article
+          </button>
+        </div>
+    </form>
+
+  </div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html
